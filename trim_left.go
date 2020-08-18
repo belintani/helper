@@ -1,4 +1,4 @@
-package string
+package helper
 
 func TrimLeftChars(s string, n int) string {
 	m := 0

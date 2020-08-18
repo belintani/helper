@@ -1,7 +1,6 @@
-package time
+package helper
 
 import (
-	stringHelper "../string"
 	"strings"
 	"time"
 )
@@ -16,7 +15,7 @@ func ParseUTCEuropeanTime(s string) (*time.Time, error) {
 		offset = 0
 	}
 
-	s = stringHelper.ReplaceAllSpaces(s, " ")
+	s = ReplaceAllSpaces(s, " ")
 	s = strings.ReplaceAll(s, "CET", "")
 	s = strings.ReplaceAll(s, "CEST", "")
 	s = strings.TrimSpace(s)
