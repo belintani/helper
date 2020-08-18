@@ -1,4 +1,4 @@
-package helper
+package slice
 
 import (
 	"math/rand"

@@ -1,4 +1,4 @@
-package helper
+package time
 
 import (
 	stringHelper "../string"
