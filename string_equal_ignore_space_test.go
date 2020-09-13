@@ -52,39 +52,45 @@ func TestEqualsIgnoreSpaces(t *testing.T) {
 		}
 	})
 
-	t.Run("Should validate two equals strings with character ' '", func(t *testing.T) {
+	t.Run("Should validate two equals strings with character [NBSP]", func(t *testing.T) {
 		if false == EqualsIgnoreSpaces(" bubble", " bubble") {
 			t.Errorf("comparation is wrong, ' bubble' and ' bubble' are equals")
 		}
 	})
 
-	t.Run("Should validate two equals strings but only the first one contains character ' ' on left", func(t *testing.T) {
+	t.Run("Should validate two equals strings but only the first one contains character [NBSP] on left", func(t *testing.T) {
 		if false == EqualsIgnoreSpaces(" bubble", "bubble") {
 			t.Errorf("comparation is wrong, ' bubble' and 'bubble' are equals")
 		}
 	})
 
-	t.Run("Should validate two equals strings but only the second one contains character ' ' on left", func(t *testing.T) {
+	t.Run("Should validate two equals strings but only the second one contains character [NBSP] on left", func(t *testing.T) {
 		if false == EqualsIgnoreSpaces("bubble", " bubble") {
 			t.Errorf("comparation is wrong, 'bubble' and ' bubble' are equals")
 		}
 	})
 
-	t.Run("Should validate two equals strings but only the first one contains character ' ' on right", func(t *testing.T) {
+	t.Run("Should validate two equals strings but only the first one contains character [NBSP] on right", func(t *testing.T) {
 		if false == EqualsIgnoreSpaces("bubble ", "bubble") {
 			t.Errorf("comparation is wrong, 'bubble ' and 'bubble' are equals")
 		}
 	})
 
-	t.Run("Should validate two equals strings but only the second one contains character ' ' on right", func(t *testing.T) {
+	t.Run("Should validate two equals strings but only the second one contains character [NBSP] on right", func(t *testing.T) {
 		if false == EqualsIgnoreSpaces("bubble", "bubble ") {
 			t.Errorf("comparation is wrong, 'bubble' and 'bubble ' are equals")
 		}
 	})
 
-	t.Run("Should validate two equals strings with different number of characters ' '", func(t *testing.T) {
+	t.Run("Should validate two equals strings with different number of characters [NBSP]", func(t *testing.T) {
 		if false == EqualsIgnoreSpaces("   bubble ", "     bubble") {
 			t.Errorf("comparation is wrong, '   bubble ' and '     bubble' are equals")
+		}
+	})
+
+	t.Run("Should validate two equals strings but the first one contains normal blank spaces and the second one contains character [NBSP]", func(t *testing.T) {
+		if false == EqualsIgnoreSpaces("bubble ", "bubble ") {
+			t.Errorf("comparation is wrong, 'bubble ' and 'bubble ' are equals")
 		}
 	})
 }
