@@ -5,6 +5,7 @@ import (
 	"reflect"
 )
 
+// Shuffle will randomly change slice elements positions
 func Shuffle(slice interface{}) {
 	rv := reflect.ValueOf(slice)
 	swap := reflect.Swapper(slice)

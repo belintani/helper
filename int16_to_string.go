@@ -1,5 +1,6 @@
 package helper
 
+// String converts an int16 to a string
 func String(v int16) string {
 	buf := [11]byte{}
 	pos := len(buf)

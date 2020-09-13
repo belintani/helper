@@ -1,5 +1,6 @@
 package helper
 
+// TrimLeftChars removes the first characters from a given string
 func TrimLeftChars(s string, n int) string {
 	m := 0
 	for i := range s {

@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+// ParseUTCEuropeanTime converts a string to an UTC (universal time) based on European layout
 func ParseUTCEuropeanTime(s string) (*time.Time, error) {
 	var offset int
 	if strings.Contains(s, "CET") {

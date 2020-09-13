@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// StringToInt16 converts a string to an int16
 func StringToInt16(val string) (int16, error) {
 
 	val = strings.TrimSpace(val)
@@ -23,6 +24,7 @@ func StringToInt16(val string) (int16, error) {
 	return int16(i), nil
 }
 
+// StringToInt32 converts a string to an int32
 func StringToInt32(val string) (int32, error) {
 	val = strings.TrimSpace(val)
 	if "" == val {
@@ -39,6 +41,7 @@ func StringToInt32(val string) (int32, error) {
 	return int32(i), nil
 }
 
+// StringToInt64 converts a string to an int64
 func StringToInt64(val string) (int64, error) {
 	val = strings.TrimSpace(val)
 	if "" == val {
